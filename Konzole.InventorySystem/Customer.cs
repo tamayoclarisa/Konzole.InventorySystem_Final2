@@ -10,6 +10,7 @@ namespace Konzole.InventorySystem
 {
 
     [Table("Customer", Schema = "IV")]
+
     public class Customer
     {
         [Key]
