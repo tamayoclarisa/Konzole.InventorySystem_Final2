@@ -34,5 +34,11 @@ namespace Konzole.InventorySystem.Web.Models
         public System.Data.Entity.DbSet<Konzole.InventorySystem.Customer> Customers { get; set; }
 
         public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.Module> Modules { get; set; }
+
+        public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.UOM> UOM { get; set; }
+
+        public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.Category> Category { get; set; }
+
+        public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.WarehouseLoc> WarehouseLoc { get; set; }
     }
 }

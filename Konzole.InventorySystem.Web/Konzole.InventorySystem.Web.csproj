@@ -360,6 +360,9 @@
     <Content Include="Views\Modules\Details.cshtml" />
     <Content Include="Views\Modules\Edit.cshtml" />
     <Content Include="Views\Modules\Index.cshtml" />
+    <Content Include="Views\Setup\CategoryList.cshtml" />
+    <Content Include="Views\Setup\WarehouseLocList.cshtml" />
+    <Content Include="Views\Setup\CreateCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
