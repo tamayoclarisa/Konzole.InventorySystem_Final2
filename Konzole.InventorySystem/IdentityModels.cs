@@ -33,15 +33,12 @@ namespace Konzole.InventorySystem.Web.Models
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<LogMessage> LogMessage { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
-        public virtual  DbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UOM> UOM { get; set; }
         public virtual DbSet<Module> Modules { get; set; }
         public virtual DbSet <UserRole> UserRoles { get; set; }
-
-        public virtual DbSet<WarehouseLoc> WarehouseLoc { get; set; }
-
-        public virtual DbSet<Category> Category { get; set; }
-
+        public virtual DbSet<Permission> Permissions { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

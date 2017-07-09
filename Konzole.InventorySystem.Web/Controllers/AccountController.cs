@@ -9,18 +9,22 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Konzole.InventorySystem.Web.Models;
+using Konzole.InventorySystem.Providers.Interface;
 
 namespace Konzole.InventorySystem.Web.Controllers
 {
     //[Authorize]
     public class AccountController : Controller
     {
+        private IUserProvider _userProvider = null;
+        //private ICustomerProvider _customerProvider = null;
         //private ApplicationSignInManager _signInManager;
         //private ApplicationUserManager _userManager;
 
-        //public AccountController()
-        //{
-        //}
+        public AccountController(IUserProvider userProvider)
+        {
+            this._userProvider = userProvider;
+        }
 
         //public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         //{
@@ -73,24 +77,22 @@ namespace Konzole.InventorySystem.Web.Controllers
                 return View(model);
             }
 
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
-            //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            //switch (result)
-            //{
-            //    case SignInStatus.Success:
+            try
+            {
+                //string strPass = KonzoleUtilities.KonzoleCryptor.Decrypt(_context.Users.Where(x => x.Password == model.Password).Select(x=>x.Password);
+                //User user = _context.Users.FirstOrDefault(x => x.UserName == model.UserName);
+
+                //string strPass = KonzoleUtilities.KonzoleCryptor.Decrypt(user.Password);
+                //if (user != null && strPass == model.Password)
                     return RedirectToLocal(returnUrl);
-            //    case SignInStatus.LockedOut:
-            //        return View("Lockout");
-            //    case SignInStatus.RequiresVerification:
-            //        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-            //    case SignInStatus.Failure:
-            //    default:
-            //        ModelState.AddModelError("", "Invalid login attempt.");
-            //        return View(model);
-            //}
+            }
+            catch (Exception ex)
+            {
 
-
+                //throw;
+            }
+            TempData["InvalidAccount"] = "Invalid username or password.";
+            return View();
         }
 
         //

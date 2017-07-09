@@ -227,6 +227,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707090454045_Initial.cs" />
+    <Compile Include="Migrations\201707090454045_Initial.Designer.cs">
+      <DependentUpon>201707090454045_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -380,6 +385,11 @@
       <Project>{C4C1157E-B7CF-4EEC-BA14-CC44E42DD69D}</Project>
       <Name>Konzole.InventorySystem</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707090454045_Initial.resx">
+      <DependentUpon>201707090454045_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
