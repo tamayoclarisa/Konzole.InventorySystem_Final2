@@ -18,6 +18,8 @@ namespace Konzole.InventorySystem.Entities
         public string ModUser { get; set; }
         public DateTime? Moddate { get; set; }
         public bool WithPermission { get; set; }
+        public Role Roles { get; set; }
+        public int? RoleId { get; set; }
       
     }
 }
