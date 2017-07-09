@@ -17,6 +17,7 @@ namespace Konzole.InventorySystem.Web
             
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<ICustomerProvider, CustomerProvider>();
+            container.RegisterType<IUserProvider, UserProvider>();
             container.RegisterType<ILoggingProvider, LoggingProvider>();
             container.RegisterType<IPersonProvider, PersonProvider>();
             container.RegisterType<ISupllierProvider, SupplierProvider>();

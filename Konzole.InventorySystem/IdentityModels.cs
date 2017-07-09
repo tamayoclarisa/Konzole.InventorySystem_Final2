@@ -33,7 +33,7 @@ namespace Konzole.InventorySystem.Web.Models
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<LogMessage> LogMessage { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
-        public virtual  DbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UOM> UOM { get; set; }
         public virtual DbSet<Module> Modules { get; set; }
         public virtual DbSet <UserRole> UserRoles { get; set; }
