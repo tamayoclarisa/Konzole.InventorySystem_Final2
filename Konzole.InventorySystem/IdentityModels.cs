@@ -30,6 +30,9 @@ namespace Konzole.InventorySystem.Web.Models
         
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+
+        public virtual DbSet<WarehouseLoc> WarehouseLoc { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<LogMessage> LogMessage { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
