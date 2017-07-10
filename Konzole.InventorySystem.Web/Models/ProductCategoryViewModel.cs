@@ -2,18 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Konzole.InventorySystem
+namespace Konzole.InventorySystem.Web.Models
 {
-    [Table("Product", Schema = "IV")]
-    public class Product
+    public class ProductCategoryViewModel
     {
         [Key]
         public int Id { get; set; }
+        public Category category { get; set; }       
         public string Name { get; set; }
         public string Sku { get; set; }
         public Category CategoryId { get; set; }
@@ -23,6 +21,5 @@ namespace Konzole.InventorySystem
         public string ModUser { get; set; }
         public DateTime? ModDate { get; set; }
         public int IsActive { get; set; }
-
     }
 }

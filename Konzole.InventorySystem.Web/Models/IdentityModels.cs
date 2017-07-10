@@ -40,5 +40,7 @@ namespace Konzole.InventorySystem.Web.Models
         public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.Category> Category { get; set; }
 
         public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.WarehouseLoc> WarehouseLoc { get; set; }
+
+        public System.Data.Entity.DbSet<Konzole.InventorySystem.Product> Products { get; set; }
     }
 }

@@ -24,6 +24,7 @@ namespace Konzole.InventorySystem.Web
             container.RegisterType<IUOMProvider, UomProvider>();
             container.RegisterType<IWarehouseLocProvider, WarehouseLocProvider>();
             container.RegisterType<ICategoryProvider, CategoryProvider>();
+            container.RegisterType<IProductProvider, ProductProvider>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
