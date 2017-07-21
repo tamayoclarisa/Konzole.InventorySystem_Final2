@@ -37,6 +37,10 @@ namespace Konzole.InventorySystem.Web.Models
         public virtual DbSet<UOM> UOM { get; set; }
         public virtual DbSet<Module> Modules { get; set; }
         public virtual DbSet <UserRole> UserRoles { get; set; }
+
+        public virtual DbSet<WarehouseLoc> WarehouseLoc { get; set; }
+
+        public virtual DbSet<Category> Category { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

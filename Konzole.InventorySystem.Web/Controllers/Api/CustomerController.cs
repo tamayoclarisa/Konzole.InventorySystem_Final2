@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Konzole.InventorySystem.Providers.Interface;
+using Konzole.InventorySystem.Entities;
 
 namespace Konzole.InventorySystem.Web.Controllers.Api
 {

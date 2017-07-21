@@ -1,10 +1,11 @@
-﻿@model Konzole.InventorySystem.Entities.Category 
+﻿@model Konzole.InventorySystem.Entities.Category
 @{
-    ViewBag.Title = "Category";
+    ViewBag.Title = "Category Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Edit</h2>
+
 
 @using (Html.BeginForm())
 {
@@ -22,7 +23,7 @@
 
             <div class="form-group">
                 <label class="col-lg-4" style="text-align:right; font-weight:normal;">Category Name:</label>
-                <div class="col-lg-4">
+                <div class="col-lg-4" >
                     @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
                 </div>
@@ -36,14 +37,12 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+        
+        }
 
-}
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
 
-
-
-
-<div>
-    @Html.ActionLink("Back to List", "CategoryList")
-</div>
 

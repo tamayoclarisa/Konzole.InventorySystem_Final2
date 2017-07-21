@@ -31,7 +31,7 @@ namespace Konzole.InventorySystem.Web.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Konzole.InventorySystem.Customer> Customers { get; set; }
+        public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.Customer> Customers { get; set; }
 
         public System.Data.Entity.DbSet<Konzole.InventorySystem.Entities.Module> Modules { get; set; }
 

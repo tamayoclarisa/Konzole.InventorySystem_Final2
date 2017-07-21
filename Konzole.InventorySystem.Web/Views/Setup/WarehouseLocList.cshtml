@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group">
 
-                                @Html.ActionLink("Create", "Create", new { controller = "Setup" }, htmlAttributes: new { @class = "btn btn-success" })
+                                @Html.ActionLink("Create", "CreateWarehouse", new { controller = "Setup" }, htmlAttributes: new { @class = "btn btn-success" })
                             </div>
                             <span class="loaders reports-load"></span>
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-transactionLogs">
@@ -50,8 +50,8 @@
                                         {
                                             <tr>
                                                 <td>
-                                                    @Html.ActionLink("Edit", "Edit", new { id = row.WarehouseLocId }) |
-                                                    @Html.ActionLink("Details", "Details", new { id = row.WarehouseLocId }) |
+                                                    @Html.ActionLink("Edit", "WarehouseEdit", new { id = row.WarehouseLocId }) |
+                                                    @Html.ActionLink("Details", "WarehouseDetails", new { id = row.WarehouseLocId }) |
                                                     @Html.ActionLink("Delete", "Delete", new { id = row.WarehouseLocId })
                                                 </td>
                                                 <td class="center">@row.LocationAddress</td>

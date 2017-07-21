@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Konzole.InventorySystem
+namespace Konzole.InventorySystem.Entities
 {
 
     [Table("Customer", Schema = "IV")]

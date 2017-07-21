@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Konzole.InventorySystem;
 using Konzole.InventorySystem.Providers.Interface;
-using Konzole.InventorySystem.Web.Models;
+using Konzole.InventorySystem.Entities;
 
 namespace Konzole.InventorySystem.Web.Controllers
 {

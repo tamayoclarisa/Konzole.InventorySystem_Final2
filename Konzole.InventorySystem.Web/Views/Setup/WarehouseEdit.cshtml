@@ -1,10 +1,11 @@
-﻿@model Konzole.InventorySystem.Entities.Category 
+﻿@model Konzole.InventorySystem.Entities.WarehouseLoc
 @{
-    ViewBag.Title = "Category";
+    ViewBag.Title = "Warehouse Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Edit</h2>
+
 
 @using (Html.BeginForm())
 {
@@ -18,13 +19,13 @@
             <h4>Category</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.CategoryId)
+            @Html.HiddenFor(model => model.WarehouseLocId)
 
             <div class="form-group">
-                <label class="col-lg-4" style="text-align:right; font-weight:normal;">Category Name:</label>
+                <label class="col-lg-4" style="text-align:right; font-weight:normal;">Location Address:</label>
                 <div class="col-lg-4">
-                    @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.LocationAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LocationAddress, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -40,10 +41,8 @@
 
 }
 
-
-
-
 <div>
-    @Html.ActionLink("Back to List", "CategoryList")
+    @Html.ActionLink("Back to List", "WarehouseLocList")
 </div>
+
 

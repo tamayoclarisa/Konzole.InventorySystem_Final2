@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Konzole.InventorySystem.Providers.Interface;
 using Konzole.InventorySystem.Web.Models;
+using Konzole.InventorySystem.Entities;
 
 namespace Konzole.InventorySystem.Providers
 {
